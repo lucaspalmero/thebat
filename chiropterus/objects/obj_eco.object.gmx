@@ -52,6 +52,7 @@ alarm[0] = room_speed;
           <argument>
             <kind>1</kind>
             <string>move_towards_point(wall_x, wall_y, 8);
+//move_towards_point(bat.x, bat.y, 8);
 </string>
           </argument>
         </arguments>
