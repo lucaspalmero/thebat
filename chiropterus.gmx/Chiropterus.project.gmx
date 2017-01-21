@@ -10,6 +10,7 @@
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_eco</sprite>
     <sprite>sprites\spr_eagle</sprite>
+    <sprite>sprites\spr_snake</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -28,6 +29,7 @@
     <objects name="Enemies">
       <object>objects\obj_enemy</object>
       <object>objects\obj_eagle</object>
+      <object>objects\obj_snake</object>
     </objects>
   </objects>
   <rooms name="rooms">
