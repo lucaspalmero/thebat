@@ -8,11 +8,13 @@
   <sprites name="sprites">
     <sprite>sprites\spr_bat</sprite>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_eco</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_getAngle.gml</script>
+    <script>scripts\scr_echo.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Controllers">
@@ -20,6 +22,8 @@
     </objects>
     <object>objects\obj_bat</object>
     <object>objects\obj_wall</object>
+    <object>objects\obj_eco</object>
+    <object>objects\obj_solid</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
