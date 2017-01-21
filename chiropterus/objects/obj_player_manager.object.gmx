@@ -67,26 +67,8 @@ if (abs(end_x - start_x) &gt; 32 or abs(end_y - start_y) &gt; 32){
     }
 }else{
     //Trazar una linea desde obj_bat hacia el punto señalado y obtener angulo
-    aim_to_mouse = scr_getAngle(bat.x, bat.y, start_x, start_y);
-    //show_message("MOUSE: "+string(aim_to_mouse));
-    with (obj_wall){
-        //Trazar una linea desde cada obj_wall hacia obj_bat.
-        aim_to_bat_angle = scr_getAngle(x + sprite_width div 2, y + sprite_height div 2, bat.x, bat.y);
-        //Si el muro esta delante del murcielago:
-        if (x &gt; bat.x){
-            var value = +180;
-        }else{
-            var value = -180;
-        }
-        //Si el inverso del angulo obtenido por los muros esta entre
-        //+45/-45 del primer angulo obtenido, cambiar imagen por un segundo
-        if (aim_to_bat_angle +value &gt;= aim_to_mouse -45 and aim_to_bat_angle +value &lt;= aim_to_mouse +45){
-            scr_echo(id, x+sprite_width div 2, y+sprite_height div 2);
-            //show_message("DONE: "+string(aim_to_bat_angle+value)+" IS BETWEEN "+string(aim_to_mouse-45)+" AND "+string(aim_to_mouse+45));
-        }else{
-            //show_message("FAILED: "+string(aim_to_bat_angle+value)+" ISN'T BETWEEN "+string(aim_to_mouse-45)+" AND "+string(aim_to_mouse+45));
-        }
-    }
+    aim_to_mouse = scr_getAngle(bat.x + bat.sprite_width div 2, bat.y + bat.sprite_height div 2, start_x, start_y);
+    scr_echo(aim_to_mouse);
     
     //Sonar ecolocalización e iluminar objetos que correspondan
 }
