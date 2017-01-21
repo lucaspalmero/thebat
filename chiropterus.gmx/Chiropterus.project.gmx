@@ -9,6 +9,7 @@
     <sprite>sprites\spr_bat</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_eco</sprite>
+    <sprite>sprites\spr_eagle</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -24,6 +25,10 @@
     <object>objects\obj_wall</object>
     <object>objects\obj_eco</object>
     <object>objects\obj_solid</object>
+    <objects name="Enemies">
+      <object>objects\obj_enemy</object>
+      <object>objects\obj_eagle</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
