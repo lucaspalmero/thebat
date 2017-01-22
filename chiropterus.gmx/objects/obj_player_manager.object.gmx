@@ -26,11 +26,34 @@
           <argument>
             <kind>1</kind>
             <string>globalvar bat, aim_to_mouse;
-bat = instance_create(128, 128, obj_bat);
 start_x = 0
 start_y = 0
 end_x = 0
 end_y = 0
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (instance_number(obj_bat) == 0)
+    bat = instance_create(64, 128, obj_bat);
 </string>
           </argument>
         </arguments>
@@ -62,15 +85,15 @@ if (abs(end_x - start_x) &gt; 32 or abs(end_y - start_y) &gt; 32){
     //Si angulo_obtenido != -1 (no puede moverse)
     //  Mover jugador
     if (bat.speed == 0){
+        //audio_play_sound(snd_jump, 10, false);
         bat.direction = angle;
         bat.speed = 16;
     }
 }else{
     //Trazar una linea desde obj_bat hacia el punto señalado y obtener angulo
+    //Sonar ecolocalización
     aim_to_mouse = scr_getAngle(bat.x + bat.sprite_width div 2, bat.y + bat.sprite_height div 2, start_x, start_y);
     scr_echo(aim_to_mouse);
-    
-    //Sonar ecolocalización e iluminar objetos que correspondan
 }
 </string>
           </argument>

@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = room_speed;
+            <string>play_echo = false;
+alarm[0] = room_speed;
 </string>
           </argument>
         </arguments>
@@ -48,7 +49,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>speed = 8;
+            <string>if (play_echo)
+    audio_play_sound(snd_soundwave, 10, false);
+speed = 8;
 visible = true;
 //move_towards_point(bat.x, bat.y, 8);
 </string>

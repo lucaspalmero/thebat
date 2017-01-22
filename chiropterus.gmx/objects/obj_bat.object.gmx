@@ -32,6 +32,29 @@ v = 0;
         </arguments>
       </action>
     </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>audio_play_sound(snd_death, 10, false);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -50,6 +73,9 @@ v = 0;
           <argument>
             <kind>1</kind>
             <string>if (vspeed != 0 and hspeed != 0){
+    if (!audio_is_playing(snd_wing) and !audio_is_playing(snd_landing)){
+        audio_play_sound(snd_wing, 10, false);
+    }
     if (place_meeting(x + hspeed, y + vspeed, obj_wall)){
         h = 0;
         if (hspeed &gt; 0){
@@ -75,14 +101,20 @@ v = 0;
                         x += h;
                     }else{
                         speed = 0;
+                        audio_stop_sound(snd_wing);
+                        audio_play_sound(snd_landing, 10, false);
                     }
                     if (!place_meeting(x, y + v, obj_wall)){
                         y += v;
                     }else{
                         speed = 0;
+                        audio_stop_sound(snd_wing);
+                        audio_play_sound(snd_landing, 10, false);
                     }
                 }else{
                     speed = 0;
+                    audio_stop_sound(snd_wing);
+                    audio_play_sound(snd_landing, 10, false);
                 }
             }
         }
@@ -110,8 +142,8 @@ v = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_message(other.message);
-room_restart();
+            <string>audio_play_sound(other.sound, 10, false);
+instance_destroy();
 </string>
           </argument>
         </arguments>

@@ -4,12 +4,21 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_hawk</sound>
+    <sound>sound\snd_snake</sound>
+    <sound>sound\snd_soundwave</sound>
+    <sound>sound\snd_landing</sound>
+    <sound>sound\snd_jump</sound>
+    <sound>sound\snd_wing</sound>
+    <sound>sound\snd_death</sound>
+    <sound>sound\snd_win</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_bat</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_eco</sprite>
-    <sprite>sprites\spr_eagle</sprite>
+    <sprite>sprites\spr_hawk</sprite>
     <sprite>sprites\spr_snake</sprite>
   </sprites>
   <backgrounds name="background"/>
@@ -28,7 +37,7 @@
     <object>objects\obj_solid</object>
     <objects name="Enemies">
       <object>objects\obj_enemy</object>
-      <object>objects\obj_eagle</object>
+      <object>objects\obj_hawk</object>
       <object>objects\obj_snake</object>
     </objects>
   </objects>
