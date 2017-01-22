@@ -12,6 +12,7 @@
     <sound>sound\snd_wing</sound>
     <sound>sound\snd_death</sound>
     <sound>sound\snd_win</sound>
+    <sound>sound\snd_boton</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="bat">
@@ -30,6 +31,10 @@
       <sprite>sprites\spr_snake2</sprite>
     </sprites>
     <sprite>sprites\spr_point</sprite>
+    <sprite>sprites\spr_title</sprite>
+    <sprite>sprites\spr_boton</sprite>
+    <sprite>sprites\spr_ready</sprite>
+    <sprite>sprites\spr_win</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -53,10 +58,16 @@
       <object>objects\obj_hawk</object>
       <object>objects\obj_snake</object>
     </objects>
+    <object>objects\obj_title</object>
     <object>objects\obj_point</object>
+    <object>objects\obj_boton</object>
+    <object>objects\obj_ready</object>
+    <object>objects\obj_win</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_test</room>
+    <room>rooms\rm_main</room>
+    <room>rooms\rm_game</room>
+    <room>rooms\rm_win</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
