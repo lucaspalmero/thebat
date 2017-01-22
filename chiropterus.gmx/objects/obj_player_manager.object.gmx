@@ -92,19 +92,22 @@ end_y = mouse_y;
 if (abs(end_x - start_x) &gt; 32 or abs(end_y - start_y) &gt; 32){
     //Si se hizo un slide mayor a 32px
     angle = scr_getAngle(start_x, start_y, end_x, end_y);
-    //Si angulo_obtenido != -1 (no puede moverse)
-    //  Mover jugador
-    if (bat.speed == 0 and angle != 0){
-        bat.sprite_index = spr_bat_fly;
-        bat.image_speed = 0.3;
-        bat.direction = angle;
-        bat.speed = 16;
+    
+    if (scr_batCanMove(angle, bat)){
+        //Si angulo_obtenido != -1 (no puede moverse)
+        //  Mover jugador
+        if (bat.speed == 0 and angle != 0){
+            bat.sprite_index = spr_bat_fly;
+            bat.image_speed = 0.3;
+            bat.direction = angle;
+            bat.speed = 16;
+        }
     }
 }else{
     if (!sonar and bat.speed == 0){
         //Trazar una linea desde obj_bat hacia el punto señalado y obtener angulo
         //Sonar ecolocalización
-        aim_to_mouse = scr_getAngle(bat.x + bat.sprite_width div 2, bat.y + bat.sprite_height div 2, start_x, start_y);
+        aim_to_mouse = scr_getAngle(bat.x, bat.y, start_x, start_y);
         sonar = true;
         scr_echo(aim_to_mouse);
     }

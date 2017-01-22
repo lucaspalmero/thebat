@@ -15,18 +15,21 @@
   </sounds>
   <sprites name="sprites">
     <sprites name="bat">
-      <sprite>sprites\spr_bat_stand_wallD</sprite>
-      <sprite>sprites\spr_bat_stand_wallL</sprite>
+      <sprite>sprites\spr_bat_wallD</sprite>
+      <sprite>sprites\spr_bat_wallL</sprite>
       <sprite>sprites\spr_bat_ground</sprite>
       <sprite>sprites\spr_bat_roof</sprite>
       <sprite>sprites\spr_bat_fly</sprite>
     </sprites>
     <sprite>sprites\spr_bat</sprite>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_walls</sprite>
     <sprite>sprites\spr_eco</sprite>
-    <sprite>sprites\spr_hawk</sprite>
-    <sprite>sprites\spr_snake</sprite>
-    <sprite>sprites\spr_sonar</sprite>
+    <sprites name="enemies">
+      <sprite>sprites\spr_hawk2</sprite>
+      <sprite>sprites\spr_snake2</sprite>
+    </sprites>
+    <sprite>sprites\spr_point</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -34,6 +37,8 @@
     <script>scripts\scr_getAngle.gml</script>
     <script>scripts\scr_echo.gml</script>
     <script>scripts\scr_getStandSprite.gml</script>
+    <script>scripts\scr_setStandSprite.gml</script>
+    <script>scripts\scr_batCanMove.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Controllers">
@@ -48,6 +53,7 @@
       <object>objects\obj_hawk</object>
       <object>objects\obj_snake</object>
     </objects>
+    <object>objects\obj_point</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
