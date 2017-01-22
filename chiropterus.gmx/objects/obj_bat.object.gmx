@@ -81,38 +81,29 @@ y_end = false;
                 x += h;
                 y += v;
             }else{
-                if (!place_meeting(x, y, obj_wall)){
-                    if (collision_point(x + h, y, obj_wall, false, false) != noone){
+                if (place_meeting(x+hspeed, y, obj_wall)){
+                    while (!place_meeting(x + h, y, obj_wall)){
                         x += h;
-                    }else{
-                        x_end = true;
                     }
-                    if (collision_point(x, y + v, obj_wall, false, false) != noone){
+                    x_end = true;
+                }
+                if (place_meeting(x, y+vspeed, obj_wall)){
+                    while (!place_meeting(x, y + v, obj_wall)){
                         y += v;
-                    }else{
-                        y_end = true;
                     }
-                    if (x_end and y_end){
-                        hspeed = 0;
-                        vspeed = 0;
-                        scr_getStandSprite(id);
-                        //status = scr_getStandSprite(id, collision_point(x, y + v, obj_wall, false, false));
-                        //scr_setStandSprite(id, status);
-                        image_speed = 0;
-                        audio_stop_sound(snd_wing);
-                        audio_play_sound(snd_landing, 10, false);
-                        x_end = false;
-                        y_end = false;
-                    }
-                }else{
-                    show_message("END");
+                    y_end = true;
+                }
+                if (x_end and y_end){
                     hspeed = 0;
                     vspeed = 0;
                     scr_getStandSprite(id);
-                    //status = scr_getStandSprite(id, collision_point(x + h, y, obj_wall, false, false));
+                    //status = scr_getStandSprite(id, collision_point(x, y + v, obj_wall, false, false));
                     //scr_setStandSprite(id, status);
+                    image_speed = 0;
                     audio_stop_sound(snd_wing);
                     audio_play_sound(snd_landing, 10, false);
+                    x_end = false;
+                    y_end = false;
                 }
             }
         }

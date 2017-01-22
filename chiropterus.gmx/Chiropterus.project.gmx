@@ -35,6 +35,8 @@
     <sprite>sprites\spr_boton</sprite>
     <sprite>sprites\spr_ready</sprite>
     <sprite>sprites\spr_win</sprite>
+    <sprite>sprites\spr_hor_bbox</sprite>
+    <sprite>sprites\spr_ver_bbox</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

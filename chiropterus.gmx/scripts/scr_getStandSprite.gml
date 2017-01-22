@@ -1,6 +1,7 @@
 ///scr_getStandSprite(bat_id)
 
-var right, up, left, down;
+var value, right, up, left, down;
+
 up = instance_create(argument0.x, argument0.y-24, obj_point);
 down = instance_create(argument0.x, argument0.y+20, obj_point);
 right = instance_create(argument0.x+6, argument0.y, obj_point);
@@ -8,15 +9,19 @@ left = instance_create(argument0.x-30, argument0.y, obj_point);
 
 up.bat_id = argument0;
 up.direction_id = 1;
+up.sprite_index = spr_hor_bbox;
 
 down.bat_id = argument0;
 down.direction_id = 3;
+down.sprite_index = spr_hor_bbox;
 
 left.bat_id = argument0;
 left.direction_id = 2;
+left.sprite_index = spr_ver_bbox;
 
 right.bat_id = argument0;
 right.direction_id = 4;
+right.sprite_index = spr_ver_bbox;
 
 /*
 //check UP
