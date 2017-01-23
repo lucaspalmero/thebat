@@ -103,8 +103,7 @@ visible = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>other.image_index = 1;
-other.alarm[0] = room_speed;
+            <string>other.alarm[0] = room_speed;
 instance_destroy();
 </string>
           </argument>

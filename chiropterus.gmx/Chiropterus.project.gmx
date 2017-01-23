@@ -44,6 +44,7 @@
     <script>scripts\scr_getStandSprite.gml</script>
     <script>scripts\scr_setStandSprite.gml</script>
     <script>scripts\scr_batCanMove.gml</script>
+    <script>scripts\scr_getWallIndex.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Controllers">
