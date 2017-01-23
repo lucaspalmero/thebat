@@ -19,6 +19,10 @@ if (argument0 and argument1 and argument2 and argument3){
                 //up, left, right
                 //up
                 return 7
+            }else{
+                //up, left
+                //up left
+                return 2
             }
         }else if (argument2){
             if (argument3){
