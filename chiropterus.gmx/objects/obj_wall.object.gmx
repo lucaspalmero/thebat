@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0;
+            <string>black_image_index = 15;
+image_index = 15;
+image_speed = 0;
 var u = false;
 var d = false;
 var l = false;
@@ -44,7 +46,7 @@ if (collision_point(x+sprite_width+1, y+sprite_height div 2, obj_wall, false, fa
     r = true;
 }
 
-light_image_index = scr_getWallIndex(u, l, d, r);
+light_image_index = scr_getWallIndex(r, u, l, d);
 </string>
           </argument>
         </arguments>
