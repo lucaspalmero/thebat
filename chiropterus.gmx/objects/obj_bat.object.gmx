@@ -164,8 +164,7 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_message("You've escaped from the cave!");
-game_end();
+            <string>room_goto_next();
 </string>
           </argument>
         </arguments>
