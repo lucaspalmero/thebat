@@ -33,6 +33,8 @@ y_end = false;
 mov_speed = 0;
 xmov = 0
 ymov = 0
+aaax = 0;
+aaay = 0;
 </string>
           </argument>
         </arguments>
@@ -55,7 +57,8 @@ ymov = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
+            <string>/// Enio se la come
+/*
 if (vspeed != 0 and hspeed != 0){
     if (hspeed &lt; 0){
         image_xscale = -1;
@@ -143,26 +146,41 @@ if (vspeed != 0 and hspeed != 0){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (mov_speed != 0){
+            <string>sprite_index = spr_bat_roof
+
+if (mov_speed != 0){
     xmov = lengthdir_x(mov_speed, direction);
     ymov = lengthdir_y(mov_speed, direction);
+    
+    set_mov_to_false = false;
 
-    if !place_meeting(x+xmov, y, obj_wall){
+    if place_meeting(x+xmov, y, obj_wall){
         while !place_meeting(x+sign(xmov), y, obj_wall)
             x+=sign(xmov);
-        xmov=0;
+        set_mov_to_false = true;
+        
+        if xmov &gt; 0
+            status = 4;
+        else
+            status = 2;
     }else{
         x+=xmov;
     }
-    if !place_meeting(x, y+ymov, obj_wall){
+    if place_meeting(x, y+ymov, obj_wall){
         while !place_meeting(x, y+sign(ymov), obj_wall)
             y+=sign(ymov);
-        ymov = 0;
+        set_mov_to_false = true;
+        
+        if ymov &gt; 0
+            status = 3;
+        else
+            status = 1;
     }else{
         y+=ymov
     }
-    if xmov = 0 and ymov = 0
-        mov_speed = 0
+    
+    if (set_mov_to_false)
+        mov_speed = 0;
 }
 </string>
           </argument>

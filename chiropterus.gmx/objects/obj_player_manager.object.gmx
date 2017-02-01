@@ -194,8 +194,8 @@ show_message(y);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text_colour(0, 0, bat.xmov, c_white, c_white, c_white, c_white, 1)
-draw_text_colour(0, 32, bat.ymov, c_white, c_white, c_white, c_white, 1)
+            <string>draw_text_colour(0, 0, bat.aaax, c_white, c_white, c_white, c_white, 1)
+draw_text_colour(0, 32, bat.aaay, c_white, c_white, c_white, c_white, 1)
 </string>
           </argument>
         </arguments>
