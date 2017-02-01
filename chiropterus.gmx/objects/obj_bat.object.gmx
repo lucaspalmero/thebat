@@ -57,8 +57,7 @@ aaay = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Enio se la come
-/*
+            <string>/*
 if (vspeed != 0 and hspeed != 0){
     if (hspeed &lt; 0){
         image_xscale = -1;
@@ -146,11 +145,16 @@ if (vspeed != 0 and hspeed != 0){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = spr_bat_roof
+            <string>if (mov_speed != 0){
 
-if (mov_speed != 0){
     xmov = lengthdir_x(mov_speed, direction);
     ymov = lengthdir_y(mov_speed, direction);
+    
+    if (xmov &lt; 0){
+        image_xscale = -1;
+    }else{
+        image_xscale = 1;
+    }
     
     set_mov_to_false = false;
 
@@ -181,6 +185,17 @@ if (mov_speed != 0){
     
     if (set_mov_to_false)
         mov_speed = 0;
+    
+    if (status != 5){
+        if (status != 1 and status != 3)
+            image_xscale = 1;
+        scr_setStandSprite(bat, status);
+        audio_play_sound(snd_landing, 10, false);
+    }else{
+        if (!audio_is_playing(snd_wing)){
+            audio_play_sound(snd_wing, 10, false);
+        }
+    }
 }
 </string>
           </argument>

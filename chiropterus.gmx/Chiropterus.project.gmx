@@ -48,7 +48,6 @@
     <script>scripts\scr_batCanMove.gml</script>
     <script>scripts\scr_getWallIndex.gml</script>
   </scripts>
-  <shaders name="shaders"/>
   <objects name="objects">
     <objects name="Controllers">
       <object>objects\obj_player_manager</object>
