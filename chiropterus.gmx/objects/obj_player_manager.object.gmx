@@ -136,7 +136,7 @@ if (sonar){
             }
         }
     }else{
-        if (!sonar and bat.speed == 0){
+        if (!sonar and bat.status != 5){
             //Trazar una linea desde obj_bat hacia el punto señalado y obtener angulo
             //Sonar ecolocalización
             aim_to_mouse = scr_getAngle(bat.x, bat.y, start_x, start_y);

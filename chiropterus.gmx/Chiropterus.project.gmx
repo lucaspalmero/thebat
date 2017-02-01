@@ -69,6 +69,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
+    <room>rooms\game2</room>
     <room>rooms\rm_game</room>
     <room>rooms\rm_win</room>
   </rooms>
