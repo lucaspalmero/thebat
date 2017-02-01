@@ -35,6 +35,8 @@
     <sprite>sprites\spr_boton</sprite>
     <sprite>sprites\spr_ready</sprite>
     <sprite>sprites\spr_win</sprite>
+    <sprite>sprites\spr_col_h</sprite>
+    <sprite>sprites\spr_col_v</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -50,15 +52,15 @@
     <objects name="Controllers">
       <object>objects\obj_player_manager</object>
     </objects>
-    <object>objects\obj_bat</object>
-    <object>objects\obj_wall</object>
-    <object>objects\obj_eco</object>
-    <object>objects\obj_solid</object>
     <objects name="Enemies">
       <object>objects\obj_enemy</object>
       <object>objects\obj_hawk</object>
       <object>objects\obj_snake</object>
     </objects>
+    <object>objects\obj_bat</object>
+    <object>objects\obj_wall</object>
+    <object>objects\obj_eco</object>
+    <object>objects\obj_solid</object>
     <object>objects\obj_title</object>
     <object>objects\obj_point</object>
     <object>objects\obj_boton</object>

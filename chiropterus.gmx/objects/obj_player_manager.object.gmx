@@ -85,7 +85,7 @@ room_is_active = true;
           <argument>
             <kind>1</kind>
             <string>if (instance_number(obj_bat) == 0)
-    bat = instance_create(48, 192, obj_bat);
+    bat = instance_create(64, 192, obj_bat);
 if (sonar){
     if (sonar_steps &lt; room_speed * 3){
         sonar_steps += 1;
@@ -131,7 +131,7 @@ if (sonar){
                 bat.sprite_index = spr_bat_fly;
                 bat.image_speed = 0.3;
                 bat.direction = angle;
-                bat.speed = 16;
+                bat.mov_speed = 8;
             }
         }
     }else{
@@ -172,6 +172,30 @@ start_y = mouse_y;
 show_message(x);
 show_message(y);
 */
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_text_colour(0, 0, bat.xmov, c_white, c_white, c_white, c_white, 1)
+draw_text_colour(0, 32, bat.ymov, c_white, c_white, c_white, c_white, 1)
 </string>
           </argument>
         </arguments>
