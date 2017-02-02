@@ -41,6 +41,7 @@
             <kind>1</kind>
             <string>message = "You have been eaten by an eagle!";
 sound = snd_hawk;
+path_start(pth_hawk, 6, path_action_reverse, false)
 </string>
           </argument>
         </arguments>
